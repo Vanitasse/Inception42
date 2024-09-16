@@ -2,10 +2,10 @@
 
 #---------------------------------------------------zsh---------------------------------------------------#
 
-# chsh -s $(which zsh)
-# wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-# sed -i '553i echo alias wp=\\"wp --allow-root --path=/var/www/wordpress\\" >> ~/.zshrc' /install.sh
-# echo "alias zshi='sh /install.sh'" >> ~/.zshrc
+chsh -s $(which zsh)
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sed -i '553i echo alias wp=\\"wp --allow-root --path=/var/www/wordpress\\" >> ~/.zshrc' /install.sh
+echo "alias zshi='sh /install.sh'" >> ~/.zshrc
 
 #---------------------------------------------------mariadb ping---------------------------------------------------#
 
