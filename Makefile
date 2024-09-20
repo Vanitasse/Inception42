@@ -29,9 +29,12 @@ stop:
 start:
 	docker compose -f ./srcs/docker-compose.yml start
 
-build:
+build: copy-env
 	clear
 	docker compose -f ./srcs/docker-compose.yml build
+
+copy-env:
+	cp /home/mablatie/.env $(shell pwd)/srcs
 
 ng:
 	@docker exec -it nginx zsh
@@ -50,6 +53,7 @@ clean:
 	@docker network rm $$(docker network ls -q) || true
 	@sudo rm -rf $(WP_DATA) || true
 	@sudo rm -rf $(DB_DATA) || true
+	@sudo rm -rf $(shell pwd)/srcs/.env
 
 re: clean up
 
